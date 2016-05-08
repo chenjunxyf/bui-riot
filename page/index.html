@@ -3,22 +3,28 @@
 {% block title %}{{title}}{% endblock %} 
 
 {% block link %}
-<link rel="stylesheet" href="/static/style/index.less">
+<link rel="stylesheet" href="/tags/todo/todo.scss">
 {% endblock %} 
 
 {% block content %}
-<div class="header">django tt toutiao</div>
 
-<div class="wrapper">
-    <img src="/static/image/logo.jpg" alt="">
-</div>
+<todo></todo>
 
-<div class="ajax_btn">ajax模拟测试</div>
-<div class="ajax_data"></div>
 {% endblock %}
 
 {% block script %}
-<script src="/static/js/lib/zepto.js"></script>
-<script src="/static/js/index.js"></script>
+<script src="/static/js/lib/riot.js"></script>
+<script>
+    riot.tag2 = riot.tag;
+</script>
+<script src="/tags/todo/todo.js"></script>
+<!-- <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script> -->
+
+<script>
+    riot.mount('todo', {
+      title: '{{title}}',
+      items: {{items|safe}}
+    });
+</script>
 {% endblock %}
 
