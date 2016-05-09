@@ -17,3 +17,11 @@ riot模式前端开发目录规范
 - fis-conf.js ------------- fis3b配置文件
 - fis-remote-conf.js ------ fis3b开发机配置
 ```
+
+## 注意
+
+由于需要在PC上兼容到IE8，所以本地安装riot包需要选择2.2.4版本
+
+```
+npm install riot@2.2.4 -g
+```
