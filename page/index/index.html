@@ -1,0 +1,33 @@
+{% extends '[[tplroot]]/page/common/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="/page/index/index.scss">
+{% endblock %}
+
+{% block content %}
+
+<div style="width: 500px; margin: 30px auto;">
+
+  <div riot-tag="test"></div>
+  <div riot-tag="todo"></div>
+  <div riot-tag="list"></div>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="/page/index/index.js"></script>
+<script>
+    // riot.mount('todo', {
+    //   title: '{{title}}',
+    //   items: {{items|safe}}
+    // });
+    // riot.mount('list', {
+    //     items: {{items|safe}}
+    // });
+    riot.mount('test', {});
+</script>
+{% endblock %}

@@ -16,6 +16,11 @@ module.exports = {
             on: true,
             command: 'riot',
             args: ['-w', 'tags', 'tags']
+        },
+        {
+            on: true,
+            command: 'riot',
+            args: ['-w', 'page', 'page']
         }
     ]
 }
