@@ -1,4 +1,4 @@
-<test>
+<test class="test">
   <h3>{ message }</h3>
   <ul>
     <li each={ techs }>{ name }</li>
@@ -14,7 +14,6 @@
   </script>
 
   <style scoped>
-    :scope { font-size: 2rem }
     h3 { color: #444 }
     ul { color: #999 }
   </style>
